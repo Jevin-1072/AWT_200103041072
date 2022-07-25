@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+			$(document).ready(function(){
+				$("#Entername").blur(function(){
+					if($(this).val()==""){
+						$("#name").text("Please enter name...");
+						$("#name").css('color','red');
+					}
+					else{
+					}
+					$(this).keypress(function(){
+						$("#name").text("");
+					});
+				});
+				$("#Enteremail").blur(function(){
+					if($(this).val()==""){
+						$("#email").text("Please enter email...");
+						$("#email").css('color','red');
+					}
+					else{
+					}
+					$(this).keypress(function(){
+						$("#email").text("");
+					});
+				});
+				$("#Enterphoneno").blur(function(){
+					if($(this).val()==""){
+						$("#phoneno").text("Please enter phone no...");
+						$("#phoneno").css('color','red');
+					}
+					else{
+					}
+					$(this).keyup(function(){
+						console.log($("#Enterphoneno").val());
+					});
+				});
+				$("#Enterpassword").blur(function(){
+					if($(this).val()==""){
+						$("#password").text("Please enter password...");
+						$("#password").css('color','red');
+					}
+					else{
+					}
+					$(this).keypress(function(){
+						console.log($("#Enterpassword").val());
+					});
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<center>
+			Name :<input id="Entername" type="text" placeholder="Enter name...">
+			<br>
+			<small id="name"></small>
+			<br>
+			Email :<input id="Enteremail" type="email" placeholder="Enter email...">
+			<br>
+			<small id="email"></small>
+			<br>
+			Phone no :<input id="Enterphoneno" type="number" placeholder="Enter phone no...">
+			<br>
+			<small id="phoneno"></small>
+			<br>
+			Password :<input id="Enterpassword" type="password" placeholder="Enter password...">
+			<br>
+			<small id="password"></small>
+			<br>
+			<button id="submit">Submit</button>
+		</center>
+	</body>
+</html>

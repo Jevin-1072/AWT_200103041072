@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Sortable function</title>
+		<style>
+			#sort1{
+				background-color:green;
+			}
+			#sort2{
+				background-color:gray;
+			}
+			li{
+				border:2px solid black;
+				background-color:pink;
+				width:150px;
+			}
+		</style>
+		<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+		<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		<script>
+			$(document).ready(function()
+			{
+				$("#sort1,#sort2").sortable({
+					connectWith: "#sort1,#sort2"
+				})
+			});
+		</script>
+	</head>
+	<body>
+		<ul id="sort1">
+			<li id="li1">First li Box</li>
+			<li id="li1">Second li Box</li>
+			<li id="li1">Third li Box</li>
+			<li id="li1">Fourth li Box</li>
+			<li id="li1">Fifth li Box</li>
+		</ul>
+		<ul id="sort2">
+			<li id="li1">First li</li>
+			<li id="li1">Second li</li>
+			<li id="li1">Third li</li>
+			<li id="li1">Fourth li</li>
+			<li id="li1">Fifth li</li>
+		</ul>
+	</body>
+</html>

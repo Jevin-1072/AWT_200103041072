@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Demo JQUERY</title>
+        
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js" type="text/javascript"></script>
+		
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#FirstTxt").focus(function(){
+					$(this).css("background-color","red");
+					$(this).css("color","red");
+				});
+				$("#SecondTxt").blur(function(){
+					$(this).css("background-color","blue");
+				});
+				$("#ThirdTxt").keypress(function(){
+					alert($(this).val());
+				});
+			});
+			
+		</script>
+	</head>
+    <body>
+        <input type="text" id="FirstTxt" placeholder="Check Text Box Focus Event..." /><hr/>
+		<input type="text" id="SecondTxt" placeholder="Check Text Box Blur Event..." /><hr/>
+		<input type="text" id="ThirdTxt" placeholder="Check Text Box Key Press Event..." /><hr/>
+    </body>
+</html>

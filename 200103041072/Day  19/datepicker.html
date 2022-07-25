@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Datepicker</title>
+		<style>
+			
+		</style>
+		<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+		<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		<script>
+			$(document).ready(function()
+			{
+				$("#datepicker").datepicker({
+					showWeek: true,
+					yearSuffix: " 2023",
+					dateFormat: "yy/dd/mm",
+					showAnim: "slideDown"
+				});
+			});
+		</script>
+	</head>
+	<body>
+		Date : <input type="text" id="datepicker">
+	</body>
+</html>

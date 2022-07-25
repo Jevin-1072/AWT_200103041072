@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<style>
+			small{
+				color:red;
+			}
+		</style>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+			var name_regex = /^([a-zA-Z]{2,20})$/;
+			var email_regex = /^[a-zA-Z0-9.! #$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+			var phone_regex = /^([0-9]{10})$/;
+			var password_regex = /^([a-zA-Z0-9]{5-8})$/;
+			
+			$(document).ready(function(){
+				$("#Entername").blur(function(){
+					if($(this).val()== "" || $(this).val()== null){
+						$("#name").text("Please enter name...");
+					}
+					else{
+						if(!$(this).val().match(name_regex)){
+							$("#name").text("Please enter valid input...");
+						}
+						else{
+							$("#name").empty();
+						}
+					}
+				});
+				$("#Entername").keypress(function(e){
+					
+					var kc = e.which;
+					if((kc>=97 && kc<=122)||(kc>=65 && kc<=90))
+					{
+						$("#name").empty();
+					}
+					else{
+						$("#name").text("invalid key input...");
+					}
+				});
+				
+				
+				$("#Enteremail").blur(function(){
+					if($(this).val()== "" || $(this).val()== null){
+						$("#email").text("Please enter email...");
+					}
+					else{
+						if(!$(this).val().match(email_regex)){
+							$("#email").text("Please enter valid input...");
+						}
+						else{
+							$("#email").empty();
+						}
+					}
+				});
+				
+				
+				$("#Enterphoneno").blur(function(){
+					if($(this).val()== "" || $(this).val()== null){
+						$("#phoneno").text("Please enter phoneno...");
+					}
+					else{
+						if(!$(this).val().match(phone_regex)){
+							$("#phoneno").text("Please enter valid input...");
+						}
+						else{
+							$("#phoneno").empty();
+						}
+					}
+				});
+				$("#Enterphoneno").keypress(function(e){
+					
+					var kc = e.which;
+					if((kc>=48 && kc<=57))
+					{
+						$("#phoneno").empty();
+					}
+					else{
+						$("#phoneno").text("invalid key input...");
+					}
+				});
+				
+				
+				
+				$("#Enterpassword").blur(function(){
+					if($(this).val()== "" || $(this).val()== null){
+						$("#password").text("Please enter password...");
+					}
+					else{
+						if(!$(this).val().match(password_regex)){
+							$("#password").text("Please enter valid input...");
+						}
+						else{
+							$("#password").empty();
+						}
+					}
+				});
+				$("#Enterpassword").keypress(function(e){
+					
+					var kc = e.which;
+					if((kc>=97 && kc<=122)||(kc>=65 && kc<=90) || (kc>=48 && kc<=57))
+					{
+						$("#password").empty();
+					}
+					else{
+						$("#password").text("invalid key input...");
+					}
+				});
+				
+			});
+		</script>
+	</head>
+	<body>
+		<center>
+			Name :<input id="Entername" type="text" placeholder="Enter name...">
+			<br>
+			<small id="name"></small>
+			<br>
+			Email :<input id="Enteremail" type="email" placeholder="Enter email...">
+			<br>
+			<small id="email"></small>
+			<br>
+			Phone no :<input id="Enterphoneno" type="number" placeholder="Enter phone no...">
+			<br>
+			<small id="phoneno"></small>
+			<br>
+			Password :<input id="Enterpassword" type="password" placeholder="Enter password...">
+			<br>
+			<small id="password"></small>
+			<br>
+			<button id="submit">Submit</button>
+		</center>
+	</body>
+</html>

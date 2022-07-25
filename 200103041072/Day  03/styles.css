@@ -1,0 +1,19 @@
+.third-type{
+	width:1100px;
+	height:100px;
+	background-color:yellow;
+	color:black;
+	font-style:italic;
+}
+#CDN{
+	width:1000px;
+	height:100px;
+	background-color:green;
+	color:white;
+	font-style:italic;
+	font-weight: bold;
+}
+*{
+	margin:0;
+	padding:0;
+}

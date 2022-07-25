@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<title>CSS Types</title>
+		<link rel="stylesheet" href="styles.css"/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<style>
+			div{
+				width:1200px;
+				height:100px;
+				background-color:pink;
+				color:black;
+				font-style:italic;
+				font-weight: bold;
+			}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div style="width:1300px; height:100px; background-color:red !important; color:white; font-style:italic; font-weight: bold;">First div ( Inline CSS )</div>
+		</div>
+		<div>
+			Second div (Internal CSS)
+		</div>
+		<div class="third-type">
+			Third Type (External CSS)
+		</div>
+		<div id="CDN">
+			<i class="fa fa-home"></i>
+			Home (Fourth Types [ CDN ])
+			<i class="fa fa-car" style="font-size:60px;color:red;"></i>
+		</div>
+		<div style="background-color:red !important;">
+			!important property of CSS...
+		</div>
+	</body>
+</html>

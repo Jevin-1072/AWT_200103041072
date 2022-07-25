@@ -1,0 +1,55 @@
+<html>
+	<body>
+		<h2>JavaScript Arrays</h2>
+		<p>This is Array</p>
+		<p id="demo"></p>
+		<script>
+			const fruit=["Apple","Mango","Banana","Grapes"];
+			document.getElementById("demo").innerHTML=fruit;
+		</script>
+		<p>This is push</p>
+		<p id="push"></p>
+		<script>
+			fruit.push("kivi");
+			document.getElementById("push").innerHTML=fruit;
+		</script>
+		<p>This is pop</p>
+		<p id="pop"></p>
+		<script>
+			fruit.pop();
+			document.getElementById("pop").innerHTML=fruit;
+		</script>
+		<p>This is sort</p>
+		<p id="sort"></p>
+		<script>
+			fruit.sort();
+			document.getElementById("sort").innerHTML=fruit;
+		</script>
+		<p>This is length</p>
+		<p id="lenght"></p>
+		<script>
+			
+			document.getElementById("lenght").innerHTML=fruit.length;
+		</script>
+		<p>This is shift</p>
+		<p id="shift"></p>
+		<script>
+			fruit.shift();
+			document.getElementById("shift").innerHTML=fruit;
+		</script>
+		<p>This is unshift</p>
+		<p id="unshift"></p>
+		<script>
+			fruit.unshift("Watermelon");
+			document.getElementById("unshift").innerHTML=fruit;
+		</script>
+		<p>This is ("10"+10) or (10+10) or ("10"-10) </p>
+		<p id="+/-"></p>
+		<script>
+			document.write("10"+10);
+			document.write(10+10);
+			document.write("10"-10);
+
+		</script>
+	</body>
+</html>

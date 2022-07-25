@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Drag and Drop Function</title>
+		<style>
+			div{
+				height:100px;
+				width:100px;
+				background-color:green;
+			}
+			#drop{
+				height:100px;
+				width:100px;
+				background-color:gray;
+			}
+			#containment{
+				width:100vw;
+				height:200px;
+				background-color:white;
+				border: 2px solid black;
+			}
+			#maindiv{
+				background-color:white;
+				height:500px;
+				width:500px;
+				border:2px solid black;
+				
+			}
+			li{
+				border:2px solid black;
+			}
+		</style>
+		<link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">  
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>  
+		<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		<script>
+			$(document).ready(function()
+			{
+				$("#drag").draggable();
+				$("#dragX").draggable ({
+					axis : "x"
+				});
+				$("#dragY").draggable ({
+					axis : "y"
+				});
+				$("#dragDistance").draggable ({
+					distance: 400
+				});
+				$("#dragDelay").draggable ({
+					delay: 2000
+				});
+				$("#Resizable").resizable();
+				$("#containment span").draggable ({
+					containment:"#containment"
+				});
+				$("#drop").droppable();
+			});
+		</script>
+	</head>
+	<body>
+		<div id="drag">Drag Function</div>
+		<hr>
+		<div id="dragX">Drag X Function</div>
+		<hr>
+		<div id="dragY">Drag Y Function</div>
+		<hr>
+		<div id="dragDistance">Drag Distance Function</div>
+		<hr>
+		<div id="dragDelay">Drag Delay Function</div>
+		<hr>
+		<div id="Resizable">Resizable Function</div>
+		<hr>
+		<div id="containment"><span>containment Function</span></div>
+		<hr>
+		<div id="drop">Drop Function</div>
+	</body>
+</html>

@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <title>Position property</title>
+    <style>
+        div {
+            border: 3px solid green;
+            text-align: center;
+            color: white;
+           
+        }
+        .fixed {
+            background-color: black;
+            position: fixed;
+            margin: 0;
+            height: 60px;
+            width: 300px;
+            top: 200px;
+            z-index: 5;
+
+        }
+
+        .absolute {
+            position: absolute;
+            color: red;
+            height: 1500px;
+            background-color: burlywood;
+        }
+
+        .relative {
+            position: relative;
+            color: blue;
+        }
+
+        .static {
+            color: blueviolet;
+        }
+
+        .sticky {
+            color: brown;
+            width: 300px;
+            height: 100px;
+            background-color: blanchedalmond;
+            left: 600px;
+            position: sticky;
+            top: 400px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="fixed">Position Fixed</div>
+    <div class="absolute">
+        <h1>Position Absolute</h1>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos nemo beatae repudiandae
+        dicta commodi architecto officia quia possimus non vitae cumque id sed consequatur expedita
+        laboriosam.........................
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="relative">
+            <h1>Position Relative</h1>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="static">
+            <h1>Position static</h1>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="sticky">
+            <h1>Position sticky</h1>
+        </div>
+    </div>
+</body>
+
+</html>

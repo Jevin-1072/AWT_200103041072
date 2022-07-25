@@ -1,0 +1,25 @@
+<html>
+	<head>
+		<title>Color Picker</title>
+		<style>
+			body{
+				width:100vw;
+			}
+			div{
+				width:50vw;
+			}
+		</style>
+		<script>
+			function changebgColor()
+			{
+				document.body.style.backgroundColor="document.getElementById(bg.value)";
+			}
+		</script>
+	</head>
+	<body id="bd">
+		<input type="color" onclick="changebgColor()">
+		<div id="dv">This is Div
+			<input type="color" onclick="changeDivColor()">
+		</div>	
+	</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<style>
+		div {
+			height: 100px;
+			width: 100px;
+			border: 2px solid black;
+			background-color: red;
+		}
+	</style>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function () {
+			$("#show").click(function () {
+				$("#div").show(4000);
+				$(this).attr('disabled', true);
+				$("#hide").attr('disabled', false);
+				$("#toggle").text("hide");
+			});
+			$("#hide").click(function () {
+				$("#div").hide(4000);
+				$(this).attr('disabled', true);
+				$("#show").attr('disabled', false);
+				$("#toggle").text("show");
+
+			});
+			$("#toggle").click(function () {
+				if ($(this).text() == "hide") {
+					$(this).text("show")
+					$("#div").hide(4000);
+					$("#hide").attr('disabled', true);
+					$("#show").attr('disabled', false);
+				}
+				else {
+					$(this).text("hide");
+					$("#div").show(4000);
+					$("#show").attr('disabled', true);
+					$("#hide").attr('disabled', false);
+				}
+			});
+			$("#plus").click(function () {
+				var MDH =parseInt($("#div").css("height"));
+				if(MDH<=500)
+				{
+					MDH+=10;
+					$("#div").css("height",MDH);
+					$("#div").css("width",MDH);
+				}
+				else
+				{
+					alert("More than 500 is not possible...");
+				}
+			});
+			$("#minus").click(function () {
+				var MDH =$("#div").height();
+				if(MDH>=100)
+				{
+					MDH-=10;
+					$("#div").css("height",MDH);
+					$("#div").css("width",MDH);
+				}
+				else
+				{
+					alert("Less than 100 is not possible...");
+				}
+			});
+		});
+	</script>
+</head>
+
+<body>
+	<div id="div"></div>
+	<br>
+	<button id="show" disabled>show</button>
+	<button id="hide">hide</button>
+	<br><br>
+	<button id="toggle">hide</button>
+	<br><br>
+	<button id="plus">+</button>
+	<button id="minus">-</button>
+</body>
+
+</html>

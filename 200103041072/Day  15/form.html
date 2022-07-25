@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+		<script>
+			$(document).ready(function()
+			{
+				$("#name").focus(function(){
+					$(this).css('background-color','red');
+				});
+				$("#name").blur(function(){
+					$(this).css('background-color','green');
+				});
+				$("#submit").click(function(){
+					var txt=$("#email").text();
+					console.log($("#email").text());
+					var first = document.getElementById("name");
+					function welcome() {
+
+						var welcomeF = "Welcome " + first.value;
+						return welcomeF;
+	
+					}
+	
+					console.log(welcome());
+				});
+				$("#cancel").click(function(){
+					$("#email").text("fgh@gmail.com");
+					
+				});
+			});
+		</script>
+	</head>
+	<body>
+	Name :<input id="name" placeholder="Enter the name...">
+	<br>
+	<span id="emal">Email :</span><span id="email">xyz@gmail.com</span>
+	<br>
+	<button id="submit">Submit</button>
+	<button id="cancel">Cancel</button>
+	</body>
+</html>
